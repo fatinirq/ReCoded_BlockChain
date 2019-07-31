@@ -1,9 +1,9 @@
-# Crowd Sourcing and Funding - DAPP Tutorial
+# Crowd Sourcing and Funding - DAPP Project
 Build my first decentralized application, or Dapp, on the Ethereum Network with this tutorial!
 
 
 ## 2019 Updated Code
-https://github.com/dappuniversity/election/tree/2019_update
+https://github.com/fatinirq/ReCoded_BlockChain.git
 
 Follow the steps below to download, install, and run this project.
 
@@ -16,18 +16,19 @@ Install these prerequisites to follow along with the tutorial. See free video tu
 
 
 ## Step 1. Clone the project
-`git clone https://github.com/dappuniversity/election`
+`git clone https://github.com/fatinirq/ReCoded_BlockChain.git
+## Step 2. Rename the folder to CrowdFun
 
-## Step 2. Install dependencies
+## Step 3. Install dependencies
 ```
-$ cd CrowdFun
+$ cd CrowdFund
 $ npm install
 ```
-## Step 3. Start Ganache
+## Step 4. Start Ganache
 Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.
 
 
-## Step 4. Compile & Deploy Crowd Sourcing and Funding Smart Contracts
+## Step 5. Compile & Deploy Crowd Sourcing and Funding Smart Contracts
 `$ truffle migrate --reset`
 You must migrate the election smart contract each time your restart ganache.
 

@@ -7,7 +7,10 @@ App = {
   init: async function() {
 
 
-
+ window.alert("\tHi, thank you for visiting my website.\t\n"+
+ " \tI would like to inform you that only join button work,\t\n"+
+"\twich will call storeMemebr function.\t\n "+
+"\tKindlly, use truffle. console to test the others. :)\t\n");
     return await App.initWeb3();
   },
   initWeb3: async function() {
@@ -59,7 +62,7 @@ App = {
         toBlock: 'latest'
       }).watch(function(error, event) {
         console.log("event triggered", event)
-        window.alert("event triggered");
+
         // Reload when a new vote is recorded
         App.render();
       });
@@ -70,8 +73,8 @@ App = {
       var loader = $("#loader");
       var content = $("#content");
 
-      //loader.show();
-    //  content.hide();
+      loader.show();
+      content.hide();
 
       // Load account data
       web3.eth.getCoinbase(function(err, account) {
@@ -85,21 +88,57 @@ App = {
 
 
         };
-      });
-      window.alert("Added new");
-      App.contracts.CrowdMember.deployed().then(function(instance) {
-      memberInstance = instance;
-      window.alert(memberInstance.enrolled());
-    //  $("#default").html(<h1 class="text-center" id="default">"Your Account: " + account+memberInstance.enrolled</h1>);
-  });
+      })},
 
-  }
     //  App.contracts.CrowdMember.deployed().then(function(instance) {
     //  memberInstance = instance;
     //  $("#default").html(<h1 class="text-center" id="default">"Your Account: " + account+memberInstance.enrolled<h1>);
     //  }
-};
 
+registerMember: function() {
+    var firstName = $('#fname').val();
+    var lastName = $('#lname').val();
+    var email = $('#email').val();
+    var myCrowd;
+    var result;
+
+    App.contracts.CrowdMember.deployed().then(function(instance) {
+      myCrowd=instance;
+
+    }).then(function(result) {
+
+      res=result;
+
+    }).catch(function(err) {
+      console.error(err);
+
+    });
+     myCrowd.storeMemebr.call(firstName , lastName, email , { from: App.account }).then(function(res){
+      result=res;
+    });
+
+  },
+
+getMember: function(){
+    var data;
+    var myCrowd;
+
+    App.contracts.CrowdMember.deployed().then(function(instance) {
+      myCrowd=instance;
+
+    }).then(function(result) {
+
+      res=result;
+
+    }).catch(function(err) {
+      console.error(err);
+
+    });
+   data= myCrowd.getMember.call();
+
+}
+
+};
 $(function() {
 
 

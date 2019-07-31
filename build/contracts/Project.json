@@ -1,9 +1,9 @@
 {
   "contractName": "Project",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol\":\"Project\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdMember.sol\":{\"keccak256\":\"0xc55ce5296e6f4e3dbe6df89b29e5598ad562169c1dba369a1604710867772e42\",\"urls\":[\"bzzr://0a3bb7c0caf2d34e78c02b399fbf26870412ac1c5a0d1d7a6fb6c4dfc581a08d\"]},\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol\":{\"keccak256\":\"0xf16e351935c8e383613f0c07759048e38c7933e0e9bfa2dc314ffa725bc8fee0\",\"urls\":[\"bzzr://37b0eb9d3238c7f574d796ded1180751b6a997a437eff75c9e29b7667a8dcf89\"]},\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol\":{\"keccak256\":\"0x1b989611c1cbadece228843964f6ae44483727c52d861e9d3447fa21dc4ce8ae\",\"urls\":[\"bzzr://8098750dc84189c8676a9625318e7e679003cc028c92b0a93a752ff5600d58d0\"]}},\"version\":1}",
-  "bytecode": "0x608060405260358060116000396000f3fe6080604052600080fdfea165627a7a72305820fb81083a9d0d8c3333a0dc185186ca2c936aa3fbbdb16fb54f6790fddc311fff0029",
-  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820fb81083a9d0d8c3333a0dc185186ca2c936aa3fbbdb16fb54f6790fddc311fff0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol\":\"Project\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdMember.sol\":{\"keccak256\":\"0x5e54ffb3084e32da380962153340b2eacb9540422854c6a9a41b327fbde3594b\",\"urls\":[\"bzzr://6715e9ba169ad96516b0c79b46eeed427207778c839c83263146170153b79e78\"]},\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol\":{\"keccak256\":\"0xfa4ad8c11f328ac73cd6384913b9787afe0ac4b9132feec61344c0912438cd58\",\"urls\":[\"bzzr://2a41873c30b86e5f7e995487e34f33bc3c2ee70121c36dea7708973e21c944d9\"]},\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol\":{\"keccak256\":\"0x1b989611c1cbadece228843964f6ae44483727c52d861e9d3447fa21dc4ce8ae\",\"urls\":[\"bzzr://8098750dc84189c8676a9625318e7e679003cc028c92b0a93a752ff5600d58d0\"]}},\"version\":1}",
+  "bytecode": "0x608060405260358060116000396000f3fe6080604052600080fdfea165627a7a72305820893e3750d446198a7d765123331af3d37e09a3ad49c12b89bb193a6fb26460be0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820893e3750d446198a7d765123331af3d37e09a3ad49c12b89bb193a6fb26460be0029",
   "sourceMap": "645:76:3:-;;;;;;;;;",
   "deployedSourceMap": "645:76:3:-;;;;;",
   "source": "pragma solidity >=0.4.25 <0.6.0;\nimport \"./CrowdMember.sol\";\nimport \"./CrowdStructure.sol\";\ncontract CrowdProject\n{\n/// Contribution Modelling\nenum   Contribution{Owner, Consultatnt, Skilled, Investor }\nmapping (uint=>CrowdStructure.Project) projects ;\nmapping (address=>address) ownerToProjects;\nCrowdMember obj;\n\n///Create Project\nconstructor() public\n{\n  //CrowdStructure.ProjectMember memory member= CrowdStructure.ProjectMember\n//  ({adr:msg.sender,data:_data,cont:CrowdStructure.Contribution.Owner}) ;\n\n\n\n\n  //prj.staff[msg.sender]=CrowdStructure.ProjectMember ({adr:msg.sender,data:_data,cont:CrowdStructure.Contribution.Owner}) ;\n\n}\n\n\n}\ncontract Project is  CrowdProject\n{\n  /// add member to a project staff\n\n\n\n}\n",
@@ -12,17 +12,17 @@
     "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol",
     "exportedSymbols": {
       "CrowdProject": [
-        390
+        401
       ],
       "Project": [
-        393
+        404
       ]
     },
-    "id": 394,
+    "id": 405,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 368,
+        "id": 379,
         "literals": [
           "solidity",
           ">=",
@@ -38,10 +38,10 @@
       {
         "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdMember.sol",
         "file": "./CrowdMember.sol",
-        "id": 369,
+        "id": 380,
         "nodeType": "ImportDirective",
-        "scope": 394,
-        "sourceUnit": 272,
+        "scope": 405,
+        "sourceUnit": 283,
         "src": "33:27:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -49,10 +49,10 @@
       {
         "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol",
         "file": "./CrowdStructure.sol",
-        "id": 370,
+        "id": 381,
         "nodeType": "ImportDirective",
-        "scope": 394,
-        "sourceUnit": 310,
+        "scope": 405,
+        "sourceUnit": 321,
         "src": "61:30:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -63,37 +63,37 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 390,
+        "id": 401,
         "linearizedBaseContracts": [
-          390
+          401
         ],
         "name": "CrowdProject",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "CrowdProject.Contribution",
-            "id": 375,
+            "id": 386,
             "members": [
               {
-                "id": 371,
+                "id": 382,
                 "name": "Owner",
                 "nodeType": "EnumValue",
                 "src": "163:5:3"
               },
               {
-                "id": 372,
+                "id": 383,
                 "name": "Consultatnt",
                 "nodeType": "EnumValue",
                 "src": "170:11:3"
               },
               {
-                "id": 373,
+                "id": 384,
                 "name": "Skilled",
                 "nodeType": "EnumValue",
                 "src": "183:7:3"
               },
               {
-                "id": 374,
+                "id": 385,
                 "name": "Investor",
                 "nodeType": "EnumValue",
                 "src": "192:8:3"
@@ -105,21 +105,21 @@
           },
           {
             "constant": false,
-            "id": 379,
+            "id": 390,
             "name": "projects",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "203:47:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$301_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$312_storage_$",
               "typeString": "mapping(uint256 => struct CrowdStructure.Project)"
             },
             "typeName": {
-              "id": 378,
+              "id": 389,
               "keyType": {
-                "id": 376,
+                "id": 387,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:4:3",
@@ -131,18 +131,18 @@
               "nodeType": "Mapping",
               "src": "203:38:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$301_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$312_storage_$",
                 "typeString": "mapping(uint256 => struct CrowdStructure.Project)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 377,
+                "id": 388,
                 "name": "CrowdStructure.Project",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 301,
+                "referencedDeclaration": 312,
                 "src": "218:22:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Project_$301_storage_ptr",
+                  "typeIdentifier": "t_struct$_Project_$312_storage_ptr",
                   "typeString": "struct CrowdStructure.Project"
                 }
               }
@@ -152,10 +152,10 @@
           },
           {
             "constant": false,
-            "id": 383,
+            "id": 394,
             "name": "ownerToProjects",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "253:42:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -164,9 +164,9 @@
               "typeString": "mapping(address => address)"
             },
             "typeName": {
-              "id": 382,
+              "id": 393,
               "keyType": {
-                "id": 380,
+                "id": 391,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "262:7:3",
@@ -182,7 +182,7 @@
                 "typeString": "mapping(address => address)"
               },
               "valueType": {
-                "id": 381,
+                "id": 392,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "271:7:3",
@@ -198,26 +198,26 @@
           },
           {
             "constant": false,
-            "id": 385,
+            "id": 396,
             "name": "obj",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "297:15:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_CrowdMember_$271",
+              "typeIdentifier": "t_contract$_CrowdMember_$282",
               "typeString": "contract CrowdMember"
             },
             "typeName": {
               "contractScope": null,
-              "id": 384,
+              "id": 395,
               "name": "CrowdMember",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 271,
+              "referencedDeclaration": 282,
               "src": "297:11:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CrowdMember_$271",
+                "typeIdentifier": "t_contract$_CrowdMember_$282",
                 "typeString": "contract CrowdMember"
               }
             },
@@ -226,38 +226,38 @@
           },
           {
             "body": {
-              "id": 388,
+              "id": 399,
               "nodeType": "Block",
               "src": "354:286:3",
               "statements": []
             },
             "documentation": "Create Project",
-            "id": 389,
+            "id": 400,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 386,
+              "id": 397,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "344:2:3"
             },
             "returnParameters": {
-              "id": 387,
+              "id": 398,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "354:0:3"
             },
-            "scope": 390,
+            "scope": 401,
             "src": "333:307:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 394,
+        "scope": 405,
         "src": "92:552:3"
       },
       {
@@ -266,36 +266,36 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 391,
+              "id": 402,
               "name": "CrowdProject",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 390,
+              "referencedDeclaration": 401,
               "src": "666:12:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CrowdProject_$390",
+                "typeIdentifier": "t_contract$_CrowdProject_$401",
                 "typeString": "contract CrowdProject"
               }
             },
-            "id": 392,
+            "id": 403,
             "nodeType": "InheritanceSpecifier",
             "src": "666:12:3"
           }
         ],
         "contractDependencies": [
-          390
+          401
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 393,
+        "id": 404,
         "linearizedBaseContracts": [
-          393,
-          390
+          404,
+          401
         ],
         "name": "Project",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 394,
+        "scope": 405,
         "src": "645:76:3"
       }
     ],
@@ -305,17 +305,17 @@
     "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/Project.sol",
     "exportedSymbols": {
       "CrowdProject": [
-        390
+        401
       ],
       "Project": [
-        393
+        404
       ]
     },
-    "id": 394,
+    "id": 405,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 368,
+        "id": 379,
         "literals": [
           "solidity",
           ">=",
@@ -331,10 +331,10 @@
       {
         "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdMember.sol",
         "file": "./CrowdMember.sol",
-        "id": 369,
+        "id": 380,
         "nodeType": "ImportDirective",
-        "scope": 394,
-        "sourceUnit": 272,
+        "scope": 405,
+        "sourceUnit": 283,
         "src": "33:27:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -342,10 +342,10 @@
       {
         "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol",
         "file": "./CrowdStructure.sol",
-        "id": 370,
+        "id": 381,
         "nodeType": "ImportDirective",
-        "scope": 394,
-        "sourceUnit": 310,
+        "scope": 405,
+        "sourceUnit": 321,
         "src": "61:30:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -356,37 +356,37 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 390,
+        "id": 401,
         "linearizedBaseContracts": [
-          390
+          401
         ],
         "name": "CrowdProject",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "CrowdProject.Contribution",
-            "id": 375,
+            "id": 386,
             "members": [
               {
-                "id": 371,
+                "id": 382,
                 "name": "Owner",
                 "nodeType": "EnumValue",
                 "src": "163:5:3"
               },
               {
-                "id": 372,
+                "id": 383,
                 "name": "Consultatnt",
                 "nodeType": "EnumValue",
                 "src": "170:11:3"
               },
               {
-                "id": 373,
+                "id": 384,
                 "name": "Skilled",
                 "nodeType": "EnumValue",
                 "src": "183:7:3"
               },
               {
-                "id": 374,
+                "id": 385,
                 "name": "Investor",
                 "nodeType": "EnumValue",
                 "src": "192:8:3"
@@ -398,21 +398,21 @@
           },
           {
             "constant": false,
-            "id": 379,
+            "id": 390,
             "name": "projects",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "203:47:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$301_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$312_storage_$",
               "typeString": "mapping(uint256 => struct CrowdStructure.Project)"
             },
             "typeName": {
-              "id": 378,
+              "id": 389,
               "keyType": {
-                "id": 376,
+                "id": 387,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:4:3",
@@ -424,18 +424,18 @@
               "nodeType": "Mapping",
               "src": "203:38:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$301_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Project_$312_storage_$",
                 "typeString": "mapping(uint256 => struct CrowdStructure.Project)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 377,
+                "id": 388,
                 "name": "CrowdStructure.Project",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 301,
+                "referencedDeclaration": 312,
                 "src": "218:22:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Project_$301_storage_ptr",
+                  "typeIdentifier": "t_struct$_Project_$312_storage_ptr",
                   "typeString": "struct CrowdStructure.Project"
                 }
               }
@@ -445,10 +445,10 @@
           },
           {
             "constant": false,
-            "id": 383,
+            "id": 394,
             "name": "ownerToProjects",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "253:42:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -457,9 +457,9 @@
               "typeString": "mapping(address => address)"
             },
             "typeName": {
-              "id": 382,
+              "id": 393,
               "keyType": {
-                "id": 380,
+                "id": 391,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "262:7:3",
@@ -475,7 +475,7 @@
                 "typeString": "mapping(address => address)"
               },
               "valueType": {
-                "id": 381,
+                "id": 392,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "271:7:3",
@@ -491,26 +491,26 @@
           },
           {
             "constant": false,
-            "id": 385,
+            "id": 396,
             "name": "obj",
             "nodeType": "VariableDeclaration",
-            "scope": 390,
+            "scope": 401,
             "src": "297:15:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_CrowdMember_$271",
+              "typeIdentifier": "t_contract$_CrowdMember_$282",
               "typeString": "contract CrowdMember"
             },
             "typeName": {
               "contractScope": null,
-              "id": 384,
+              "id": 395,
               "name": "CrowdMember",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 271,
+              "referencedDeclaration": 282,
               "src": "297:11:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CrowdMember_$271",
+                "typeIdentifier": "t_contract$_CrowdMember_$282",
                 "typeString": "contract CrowdMember"
               }
             },
@@ -519,38 +519,38 @@
           },
           {
             "body": {
-              "id": 388,
+              "id": 399,
               "nodeType": "Block",
               "src": "354:286:3",
               "statements": []
             },
             "documentation": "Create Project",
-            "id": 389,
+            "id": 400,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 386,
+              "id": 397,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "344:2:3"
             },
             "returnParameters": {
-              "id": 387,
+              "id": 398,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "354:0:3"
             },
-            "scope": 390,
+            "scope": 401,
             "src": "333:307:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 394,
+        "scope": 405,
         "src": "92:552:3"
       },
       {
@@ -559,36 +559,36 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 391,
+              "id": 402,
               "name": "CrowdProject",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 390,
+              "referencedDeclaration": 401,
               "src": "666:12:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CrowdProject_$390",
+                "typeIdentifier": "t_contract$_CrowdProject_$401",
                 "typeString": "contract CrowdProject"
               }
             },
-            "id": 392,
+            "id": 403,
             "nodeType": "InheritanceSpecifier",
             "src": "666:12:3"
           }
         ],
         "contractDependencies": [
-          390
+          401
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 393,
+        "id": 404,
         "linearizedBaseContracts": [
-          393,
-          390
+          404,
+          401
         ],
         "name": "Project",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 394,
+        "scope": 405,
         "src": "645:76:3"
       }
     ],
@@ -609,11 +609,17 @@
       "events": {},
       "links": {},
       "address": "0xba0901Bb626BFe94D7C87369BE11AEA1d9BCB531",
-      "transactionHash": "0xf0f22583807af164910d2c43a28f71a7121185e2d9dc12ccd2ccc30c4c73a9e8"
+      "transactionHash": "0x961cf9aea0fb864c15307341aa9a2ea609437e1cbeeaa3c15d03e6f6074aed94"
+    },
+    "1564584121222": {
+      "events": {},
+      "links": {},
+      "address": "0xb5E3AdC484bc9a3C1f6012d088c6bF11cE1027aC",
+      "transactionHash": "0xb119d699a34c9ed2fa107d711bc910cd3395acf4e69fae146046ef09b588af38"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-07-31T07:57:34.886Z",
+  "updatedAt": "2019-07-31T16:44:53.648Z",
   "devdoc": {
     "methods": {}
   },

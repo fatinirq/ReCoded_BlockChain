@@ -3,18 +3,12 @@
   <div class="container" id="default" style="width: 650px;">
     <div class="row">
       <div class="col-lg-12">
-        <form onSubmit="App.registerMember(); return false;">
-              <div class="form-group">
-                <label for="storeMemebr">Enter Your Info Candidate</label>
-                <br>
-                First name: <input type="text" name="fname"><br>
-                Last name: <input type="text" name="lname"><br>
-                Email: <input type="text" name="email"><br>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary">Join</button>
-              <hr />
-            </form>
+        <form id=info onsubmit="App.getMember()">
+          <label for="getMemebr" ></label>
+          <br>
+          <button type="submit" class="btn btn-primary">Get</button>
+
+        </form>
         <hr/>
         <br/>
       </div>
