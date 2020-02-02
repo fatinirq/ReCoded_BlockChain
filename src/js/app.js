@@ -61,10 +61,10 @@ App = {
         fromBlock: 0,
         toBlock: 'latest'
       }).watch(function(error, event) {
-        console.log("event triggered", event)
+        console.log("event triggered", event);
+        console.log ("error= "+ error);
 
-        // Reload when a new vote is recorded
-        App.render();
+
       });
     });
   },
@@ -95,48 +95,66 @@ App = {
     //  $("#default").html(<h1 class="text-center" id="default">"Your Account: " + account+memberInstance.enrolled<h1>);
     //  }
 
-registerMember: function() {
-    var firstName = $('#fname').val();
-    var lastName = $('#lname').val();
-    var email = $('#email').val();
+registerMember: function(fname,lname,email) {
+  console.log(fname.value);
+
+
+  console.log("I'm in registerMember")
+    var firstName = fname;
+    var lastName = lname;//$('#lname').val();
+    var email = email;//$('#email').val();
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+
     var myCrowd;
     var result;
+    const account=App.account;
+    console.log(account);
 
     App.contracts.CrowdMember.deployed().then(function(instance) {
-      myCrowd=instance;
 
-    }).then(function(result) {
+      return instance.storeMember(firstName , lastName, email, {from: account});
+    }).then(function(res) {
+
 
       res=result;
 
     }).catch(function(err) {
+      console.log(firstName);
+      console.log(lastName);
+      console.log(email);
+      console.log(account);
       console.error(err);
 
+
     });
-     myCrowd.storeMemebr.call(firstName , lastName, email , { from: App.account }).then(function(res){
-      result=res;
-    });
+
 
   },
 
 getMember: function(){
     var data;
     var myCrowd;
-
+    console.log("in getMemberFirstName Function");
     App.contracts.CrowdMember.deployed().then(function(instance) {
-      myCrowd=instance;
+      console.log("My instance= " + instance);
+      console.log("My account= " + App.account);
 
+      return instance.getMember.call(App.account,{from:App.account});
     }).then(function(result) {
-
-      res=result;
+      console.log("My result is " + result);
+      data=result;
+      console.log("This the first name "+data);
 
     }).catch(function(err) {
       console.error(err);
 
     });
-   data= myCrowd.getMember.call();
+  }
+  // data=
 
-}
+
 
 };
 $(function() {

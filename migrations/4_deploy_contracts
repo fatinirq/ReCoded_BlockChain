@@ -1,4 +1,4 @@
-const CrowdProject = artifacts.require("./Project.sol");
+const CrowdProject = artifacts.require("CrowdProject");
 
 module.exports = function(deployer) {
   deployer.deploy(CrowdProject);

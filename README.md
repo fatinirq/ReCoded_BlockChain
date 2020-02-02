@@ -2,8 +2,8 @@
 Build my first decentralized application, or Dapp, on the Ethereum Network with this tutorial!
 
 
-## 2019 Updated Code
-https://github.com/fatinirq/ReCoded_BlockChain.git
+## 2020 Updated Code
+https://github.com/fatinirq/Crowd_Consensys.git
 
 Follow the steps below to download, install, and run this project.
 
@@ -16,7 +16,7 @@ Install these prerequisites to follow along with the tutorial. See free video tu
 
 
 ## Step 1. Clone the project
-`git clone https://github.com/fatinirq/ReCoded_BlockChain.git
+`git clone https://github.com/fatinirq/Crowd_Consensys.git
 ## Step 2. Rename the folder to CrowdFun
 
 ## Step 3. Install dependencies
@@ -25,14 +25,18 @@ $ cd CrowdFund
 $ npm install
 ```
 ## Step 4. Start Ganache
-Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.
+Open the Ganache GUI (or CLI) client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.
+
+## Step 5. Change the configuration
+According to your test net update the configuration of the net connection in both truffle-config.js and app.js files.
 
 
-## Step 5. Compile & Deploy Crowd Sourcing and Funding Smart Contracts
+
+## Step 6. Compile & Deploy Crowd Sourcing and Funding Smart Contracts
 `$ truffle migrate --reset`
 You must migrate the election smart contract each time your restart ganache.
 
-## Step 5. Configure Metamask
+## Step 7. Configure Metamask
 
 - Unlock Metamask
 - Connect metamask to your local Etherum blockchain provided by Ganache.
@@ -43,5 +47,4 @@ You must migrate the election smart contract each time your restart ganache.
 Visit this URL in your browser: http://localhost:3000
 
 If you get stuck, please contact me.
-# ReCoded_BlockChain
-# ReCoded_BlockChain
+# Consensys_Blockchain

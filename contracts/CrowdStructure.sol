@@ -1,7 +1,13 @@
 pragma solidity >=0.5.0 <0.6.0;
  library CrowdStructure
  {
-   enum   Contribution{Owner, Consultatnt, Skilled, Investor }
+   enum   Contribution{
+      Owner
+      ,Admin
+     , Consultatnt
+     ,Skilled
+     //Investor
+   }
    struct  MemberData {
 
 
@@ -21,23 +27,19 @@ pragma solidity >=0.5.0 <0.6.0;
    struct ProjectMember
    {
      address adr;
-     MemberData data;
      Contribution cont;
 
    }
    /// Project Modelling
    struct Project
    {
-
+    uint PID;
+    address admin;
     string projectDiscrption;
     string projectName;
-    mapping (address=> ProjectMember) staff;
-   }
-   struct OwnerProjects
-   {
-     uint count;
-     mapping (uint=>uint) idToProject;
-
+    uint maxContributers;
+    uint noContributers;
+    mapping (address=>ProjectMember) staff;
    }
 
 
